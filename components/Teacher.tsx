@@ -4,8 +4,8 @@ import { BlobShape, FlowerShape } from "./Shapes";
 const CERTS = [
   { name: "빅데이터분석기사", issuer: "한국데이터산업진흥원", year: "2022" },
   { name: "정보처리기사", issuer: "한국산업인력공단", year: "2009" },
-  { name: "컴퓨터활용능력 1급", issuer: "대한상공회의소", year: "2021" },
   { name: "평생교육사 2급", issuer: "교육부", year: "2025" },
+  { name: "컴퓨터활용능력 1급", issuer: "대한상공회의소", year: "2021" },  
 ];
 
 const LECTURES = [

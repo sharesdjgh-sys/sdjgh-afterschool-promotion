@@ -10,12 +10,13 @@ export default function About() {
             <h2 className="section-title">
               코딩도 로봇도<br /><em>처음</em>이어도 괜찮아요
             </h2>
-          </div>
-          <p className="section-lead reveal d1">
-            인공지능·코딩·로봇을 처음 접하는 학생도 18차시가 끝날 때쯤엔
-            진짜 결과물을 손에 쥐게 되는 수업이에요.
+            <p className="section-lead">
+            인공지능·코딩·로봇을 처음 접하는 학생도 <br/>
+            18차시가 끝날 때쯤엔 진짜 결과물을 손에 쥐게 되는 수업이에요.<br/>
             선행 지식 없이도, 한 번 빠져도 따라올 수 있어요.
           </p>
+          </div>
+          
         </div>
 
         <div className="stat-row reveal d2">
