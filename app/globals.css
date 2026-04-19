@@ -266,7 +266,7 @@ section{ position:relative; padding: 80px 0; }
 .effect-card.accent{ background: var(--yellow); color: var(--ink); border-color: transparent; }
 .effect-card.accent .n{ color: rgba(26,26,46,0.5); }
 .effect-card.accent p{ color: rgba(26,26,46,0.75); }
-@media (max-width: 900px){ .effect-card.big, .effect-card.mid, .effect-card.sm{ grid-column: span 12; } }
+@media (min-width: 641px) and (max-width: 900px){ .effect-card.big, .effect-card.mid, .effect-card.sm{ grid-column: span 12; } }
 
 /* ============ Teacher ============ */
 .teacher{ background: var(--bg-cream); }
@@ -508,6 +508,130 @@ footer{ background: var(--ink); color: rgba(255,255,255,0.55); padding: 52px 0 4
 footer .foot-inner{ display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-end; }
 footer .foot-brand{ font-size: 20px; font-weight: 800; color: #fff; line-height: 1.3; letter-spacing: -0.02em; }
 footer .foot-meta{ text-align: right; line-height: 1.8; }
+
+/* ============ Responsive: Tablet (≤900px) ============ */
+@media (max-width: 900px) {
+  .hero { padding: 100px 0 56px; }
+  .part-block { padding: 28px 22px; }
+  .teacher-info { padding: 28px 22px; }
+  .apply-info, .apply-form { padding: 28px 22px; }
+}
+
+/* ============ Responsive: Mobile (≤640px) ============ */
+@media (max-width: 640px) {
+  /* Nav */
+  .nav { max-width: calc(100% - 24px); top: 10px; }
+  .nav .brand { font-size: 12px; padding: 4px 10px 4px 6px; gap: 6px; }
+  .nav .brand-dot { width: 12px; height: 12px; }
+  .nav .cta { padding: 7px 12px; font-size: 12px; }
+
+  /* Hero */
+  .hero { padding: 76px 0 36px; }
+  .hero-curriculum { display: none; }
+  .hero h1 { margin-top: 14px; }
+  .hero-sub { margin-top: 12px; font-size: var(--t-sm); line-height: 1.65; }
+  .hero-meta { margin-top: 16px; gap: 5px; }
+  .hero-meta .chip { padding: 6px 11px; font-size: 12px; }
+  .hero-cta-row { margin-top: 18px; flex-direction: column; gap: 8px; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; padding: 14px 20px; }
+  .blob-deco { opacity: 0.35; }
+  .marquee-wrap { margin-top: 36px; }
+
+  /* Section 공통 */
+  .section-title { font-size: clamp(20px, 6.5vw, 30px); }
+  .section-lead { font-size: var(--t-sm); }
+
+  /* About */
+  .stat-card { padding: 16px 14px; }
+  .stat-card .stat-num { font-size: 30px; }
+  .stat-card .stat-unit { font-size: 15px; }
+  .feature { padding: 18px; gap: 8px; }
+  .feature h3 { font-size: var(--t-base); }
+  .feature p { font-size: var(--t-sm); }
+
+  /* Effects */
+  .effects { padding: 56px 0; }
+  .effect-grid { margin-top: 28px; gap: 8px; grid-template-columns: 1fr 1fr; }
+  .effect-card.big { grid-column: span 2; }
+  .effect-card.mid, .effect-card.sm { grid-column: span 1; }
+  .effect-card { padding: 18px 14px; }
+  .effect-card h3 { font-size: var(--t-base); margin-top: 10px; }
+  .effect-card p { font-size: var(--t-sm); margin-top: 6px; }
+
+  /* Curriculum 탭: 가로 스크롤 */
+  .part-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .part-tabs::-webkit-scrollbar { display: none; }
+  .part-tab { flex-shrink: 0; padding: 9px 14px; font-size: var(--t-sm); }
+  .part-block { padding: 16px 14px; margin-top: 16px; border-radius: var(--r-lg); }
+  .part-block .part-head { padding-bottom: 14px; gap: 10px; }
+  .part-block .part-head h3 { font-size: var(--t-base); }
+  .part-desc { font-size: var(--t-sm); }
+  .part-badge { font-size: 11px; padding: 5px 10px; }
+  .part-tool-header { padding: 12px 14px; }
+  .part-tool-name { font-size: var(--t-base); }
+  .lessons { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .lesson { padding: 12px 11px 10px; min-height: unset; }
+  .lesson .cha { font-size: 18px; }
+  .lesson .t-title { margin-top: 8px; font-size: var(--t-sm); }
+  .lesson .t-topic { font-size: 11px; margin-top: 4px; }
+  .lesson .t-output { margin-top: 8px; padding-top: 8px; font-size: 11px; }
+
+  /* Teacher - 사진을 좌측 작게, 이름 우측 배치 */
+  .teacher-left { flex-direction: row; align-items: stretch; }
+  .teacher-portrait { width: 110px; flex-shrink: 0; aspect-ratio: 3/4; }
+  .teacher-nameplate { padding: 14px 14px 16px; flex: 1; border-top: none; border-left: 1px solid rgba(26,26,46,0.08); }
+  .teacher-card { margin-top: 20px; border-radius: var(--r-lg); }
+  .nameplate-name { font-size: 18px; }
+  .teacher-info { padding: 18px 16px; }
+  .teacher-quote { font-size: var(--t-sm); padding: 12px 14px 12px 16px; line-height: 1.6; }
+  .quote-decoration { font-size: 36px; }
+  .teacher-bio { font-size: var(--t-sm); margin-top: 12px; line-height: 1.75; }
+  .teacher-certs { margin-top: 16px; }
+  .certs-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .cert-item { padding: 10px 12px; }
+  .teacher-tags { margin-top: 14px; gap: 5px; }
+  .teacher-profile-link { margin-left: 0; margin-top: 2px; width: 100%; justify-content: center; }
+  .teacher-track { margin-top: 16px; }
+  .track-stats { gap: 8px; }
+  .track-stat { padding: 14px 12px; }
+  .track-num { font-size: 26px; }
+  .track-plus { font-size: 16px; }
+  .track-label { font-size: 11px; }
+  .track-grid { gap: 6px; }
+  .track-item { padding: 11px 13px; }
+  .track-item-org { font-size: 12px; }
+  .track-item-title { font-size: var(--t-xs); }
+
+  /* Apply */
+  .apply { padding: 56px 0 64px; }
+  .apply-grid { margin-top: 20px; gap: 14px; }
+  .apply-info { padding: 20px 16px; border-radius: var(--r-lg); }
+  .apply-info h3 { font-size: 18px; }
+  .apply-info .info-list { margin-top: 18px; gap: 10px; }
+  .apply-info .info-row { grid-template-columns: 60px 1fr; gap: 10px; padding-bottom: 10px; }
+  .apply-info .info-row .v { font-size: var(--t-base); }
+  .apply-form { padding: 20px 16px; border-radius: var(--r-lg); }
+  .apply-form h3 { font-size: 18px; }
+  .field { margin-top: 14px; }
+  .field input, .field select, .field textarea { padding: 10px 12px; font-size: var(--t-sm); }
+  .submit-row { flex-direction: column; align-items: stretch; gap: 8px; margin-top: 20px; }
+  .btn-submit { justify-content: center; width: 100%; padding: 14px; }
+
+  /* Footer */
+  footer { padding: 36px 0 28px; }
+  footer .foot-inner { gap: 14px; }
+  footer .foot-brand { font-size: 16px; }
+  footer .foot-meta { text-align: left; }
+}
+
+/* ============ Responsive: Small mobile (≤380px) ============ */
+@media (max-width: 380px) {
+  .stat-row { grid-template-columns: 1fr; }
+  .track-stats { gap: 5px; }
+  .track-num { font-size: 20px; }
+  .track-stat { padding: 11px 9px; }
+  .hero-meta { gap: 4px; }
+}
 
 /* ============ Reveal animation ============ */
 .js-reveal .reveal{ opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(.2,.7,.2,1), transform 0.8s cubic-bezier(.2,.7,.2,1); }

@@ -9,14 +9,14 @@ const CERTS = [
 ];
 
 const LECTURES = [
-  { title: "방과후학교 강사", org: "서대전여자고등학교", period: "2025.05 ~ 2025.12", badge: "방과후학교", featured: true },
-  { title: "디지털튜터", org: "서대전여자고등학교", period: "2025.04 ~ 현재", badge: "현재 진행 중", featured: true },
-  { title: "정보처리기사 실기 강의", org: "클래스101", period: "2025.11 ~ 현재", badge: "현재 진행 중" },
-  { title: "AI 입문 강의 (5개 학기)", org: "대전평생교육진흥원", period: "2025.01 ~ 현재", badge: "현재 진행 중" },
+  { title: "방과후학교 강사", org: "서대전여자고등학교", period: "2025.05 ~ 2025.12", featured: true },
+  { title: "디지털튜터", org: "서대전여자고등학교", period: "2025.04 ~ 현재", featured: true },
+  { title: "정보처리기사 실기 강의", org: "클래스101", period: "2025.11 ~ 현재" },
+  { title: "AI 입문 강의 (5개 학기)", org: "대전평생교육진흥원", period: "2025.01 ~ 현재" },
   { title: "생성형 AI 특강 · Git 교육", org: "배재대학교", period: "2024 ~ 2025" },
   { title: "생성형 AI 활용 방안 특강", org: "한국항공우주연구원", period: "2024.11" },
   { title: "정보처리기사 필기·실기 특강", org: "목원대학교", period: "2023 ~ 2024" },
-  { title: "IT 튜터링 · 강의 · 강연", org: "인생교수의 AI 연구소", period: "2021 ~ 현재", badge: "현재 진행 중" },
+  { title: "IT 튜터링 · 강의 · 강연", org: "인생교수의 AI 연구소", period: "2021 ~ 현재" },
 ];
 
 export default function Teacher() {
@@ -131,11 +131,7 @@ export default function Teacher() {
                 className={`track-item${lec.featured ? " featured" : ""}`}
                 key={lec.org + lec.title}
               >
-                {lec.badge && (
-                  <span className={`track-badge ${lec.badge === "현재 진행 중" ? "active" : "special"}`}>
-                    {lec.badge}
-                  </span>
-                )}
+
                 <p className="track-item-org">{lec.org}</p>
                 <p className="track-item-title">{lec.title}</p>
                 <p className="track-item-period">{lec.period}</p>
