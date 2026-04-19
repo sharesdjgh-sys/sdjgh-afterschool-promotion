@@ -1,7 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --eslint --import-alias \"@/*\")"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --eslint --import-alias \"@/*\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:10369)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5280)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(taskkill /F /IM \"node.exe\")",
+      "Bash(cmd /c \"taskkill /F /IM node.exe\")",
+      "Bash(cmd /c \"netstat -ano | findstr :3000\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6320)",
+      "Bash(powershell -Command 'Add-Type -AssemblyName System.IO.Compression.FileSystem; $inFile = '\\\\''C:/Users/LifeProfessor/.claude/projects/D--Programming-study-afterschool-promotion/30fa4666-7a3d-4ae5-822d-6a666573b9b4/tool-results/webfetch-1776492850742-ma325n.bin'\\\\''; $outFile = '\\\\''C:/Users/LifeProfessor/.claude/projects/D--Programming-study-afterschool-promotion/30fa4666-7a3d-4ae5-822d-6a666573b9b4/tool-results/design_decoded.html'\\\\''; $input = [System.IO.File]::OpenRead\\($inFile\\); $gz = New-Object System.IO.Compression.GZipStream\\($input, [System.IO.Compression.CompressionMode]::Decompress\\); $output = [System.IO.File]::Create\\($outFile\\); $gz.CopyTo\\($output\\); $gz.Close\\(\\); $input.Close\\(\\); $output.Close\\(\\); Write-Host Done')"
     ]
   }
 }
