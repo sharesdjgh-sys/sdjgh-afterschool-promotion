@@ -22,7 +22,7 @@ export default function About() {
         <div className="stat-row reveal d2">
           <div className="stat-card">
             <div className="stat-num">18<span className="stat-unit">차시</span></div>
-            <div className="stat-label">주 1회 · 60분</div>
+            <div className="stat-label">주 1회 · 50분</div>
             <BlobShape className="shape" fill="#ff6b9d" style={{ width: 80, opacity: 0.15 }} />
           </div>
           <div className="stat-card">
