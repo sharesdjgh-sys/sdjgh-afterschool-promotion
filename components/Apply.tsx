@@ -68,7 +68,7 @@ export default function Apply() {
             <div className="info-list">
               {[
                 { k: "대상", v: "1·2학년 전체", s: "학년 구분 없이 신청 가능" },
-                { k: "일정", v: "주 1회 · 총 18차시", s: "매주 60분 수업" },
+                { k: "일정", v: "주 1회 · 총 18차시", s: "매주 금요일 오후 4시 20분~5시 10분 수업" },
                 { k: "장소", v: "본교 1층 스마트학습실", s: "장소 변경시 안내 예정" },
                 { k: "비용", v: "미정", s: "신청 학생수에 따라 비용 발생 예정" },
               ].map(({ k, v, s }) => (
@@ -143,7 +143,7 @@ export default function Apply() {
                 <div className="submit-row">
                   <span className="submit-hint">* 표시 항목은 필수입니다</span>
                   <button type="submit" className="btn-submit">
-                    신청 완료 <ArrowIcon stroke="#fff" />
+                    수업 신청
                   </button>
                 </div>
               </form>

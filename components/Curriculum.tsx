@@ -67,6 +67,7 @@ export default function Curriculum() {
                   <p className="part-tool-name">MecDog — 교육 및 연구용으로 설계된 오픈 소스 AI 4족 보행 로봇 개</p>
                   <p className="part-tool-desc"></p>
                 </div>
+                <span className="part-tool-cta">보러가기 →</span>
               </div>
               <Image
                 src="/mecdog.jpg"
@@ -91,6 +92,7 @@ export default function Curriculum() {
                   <p className="part-tool-name">MecDog 로봇 제어를 위한 파이썬 학습</p>
                   <p className="part-tool-desc"></p>
                 </div>
+                <span className="part-tool-cta">체험하기 →</span>
               </div>
               <Image
                 src="/vibe_coding.png"
@@ -115,6 +117,7 @@ export default function Curriculum() {
                   <p className="part-tool-name">AI 이미지 프롬프트 학습 도우미</p>
                   <p className="part-tool-desc"></p>
                 </div>
+                <span className="part-tool-cta">체험하기 →</span>
               </div>
               <Image
                 src="/think_image_prompt.png"
@@ -139,6 +142,7 @@ export default function Curriculum() {
                   <p className="part-tool-name">AI 채팅 프롬프트 학습 도우미</p>
                   <p className="part-tool-desc"></p>
                 </div>
+                <span className="part-tool-cta">체험하기 →</span>
               </div>
               <Image
                 src="/think_chat_prompt.png"

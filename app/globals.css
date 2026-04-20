@@ -203,9 +203,11 @@ section{ position:relative; padding: 80px 0; }
 .part-tool{
   display: block; margin: 24px 0 0;
   border: 1.5px solid var(--ink-15); border-radius: var(--r-lg); overflow: hidden;
-  transition: border-color .2s, box-shadow .2s;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, transform .15s;
 }
 .part-tool:hover{ border-color: var(--pink); box-shadow: 0 8px 24px -12px #ff6b9d40; }
+.part-tool:active{ transform: scale(0.985); }
 .part-tool-header{
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 18px 22px;
