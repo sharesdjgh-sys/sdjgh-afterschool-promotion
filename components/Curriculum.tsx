@@ -23,7 +23,7 @@ export default function Curriculum() {
             매 차시 하나의 완성된 결과물을 만들어가요.
           </p>
           <p className="curriculum-notice">
-            ※ 차시 수(약 18차시 예정) 및 커리큘럼 내용은 운영 상황에 따라 변동될 수 있습니다.
+          ※ 차시 수(약 18차시 예정) 및 커리큘럼 내용은 운영 상황에 따라 변동될 수 있습니다.
           </p>
         </div>
 
