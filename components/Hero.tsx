@@ -45,7 +45,7 @@ export default function Hero() {
 
           <div className="hero-meta reveal d3">
             <span className="chip"><strong>18</strong> 차시 예정</span>
-            <span className="chip">주 1회 · <strong>60</strong>분</span>
+            <span className="chip">주 1회 · <strong>50</strong>분</span>
             <span className="chip">대상 · 1·2학년</span>
             <span className="chip">매 차시 결과물</span>
           </div>
