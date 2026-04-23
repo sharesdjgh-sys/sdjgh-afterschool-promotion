@@ -12,7 +12,7 @@ export default function About() {
             </h2>
             <p className="section-lead">
             인공지능·코딩·로봇을 처음 접하는 학생도 <br/>
-            18차시가 끝날 때쯤엔 진짜 결과물을 손에 쥐게 되는 수업이에요.<br/>
+            18주가 끝날 때쯤엔 진짜 결과물을 손에 쥐게 되는 수업이에요.<br/>
             선행 지식 없이도, 한 번 빠져도 따라올 수 있어요.
           </p>
           </div>
@@ -21,8 +21,8 @@ export default function About() {
 
         <div className="stat-row reveal d2">
           <div className="stat-card">
-            <div className="stat-num">18<span className="stat-unit">차시</span></div>
-            <div className="stat-label">주 1회 · 50분</div>
+            <div className="stat-num">18<span className="stat-unit">주</span></div>
+            <div className="stat-label">주 2회 · 화·수 50분</div>
             <BlobShape className="shape" fill="#ff6b9d" style={{ width: 80, opacity: 0.15 }} />
           </div>
           <div className="stat-card">

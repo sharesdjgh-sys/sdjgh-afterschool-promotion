@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { PARTS } from "@/lib/data";
 
 export default function Curriculum() {
   const [activeId, setActiveId] = useState(PARTS[0].id);
   const [openLesson, setOpenLesson] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const { partId } = (e as CustomEvent<{ partId: string }>).detail;
+      if (PARTS.some((p) => p.id === partId)) {
+        setActiveId(partId);
+        setOpenLesson(null);
+      }
+    };
+    window.addEventListener("curriculum:select", handler);
+    return () => window.removeEventListener("curriculum:select", handler);
+  }, []);
 
   const activePart = PARTS.find((p) => p.id === activeId)!;
 
@@ -20,10 +32,10 @@ export default function Curriculum() {
           </h2>
           <p className="section-lead">
             AI 이해부터 이미지·영상 제작, 바이브코딩, 4족 로봇 MecDog까지.<br/>
-            매 차시 하나의 완성된 결과물을 만들어가요.
+            매 주차 하나의 완성된 결과물을 만들어가요.
           </p>
           <p className="curriculum-notice">
-          ※ 차시 수(약 18차시 예정) 및 커리큘럼 내용은 운영 상황에 따라 변동될 수 있습니다.
+          ※ 주차 수(약 18주차 예정) 및 커리큘럼 내용은 운영 상황에 따라 변동될 수 있습니다.
           </p>
         </div>
 
@@ -165,7 +177,7 @@ export default function Curriculum() {
                 >
                   <div>
                     <div className="cha">
-                      {lesson.no}<span className="suf">차시</span>
+                      {lesson.no}<span className="suf">주차</span>
                     </div>
                     <div className="t-title">{lesson.title}</div>
                     <div className="t-topic">{lesson.topic}</div>

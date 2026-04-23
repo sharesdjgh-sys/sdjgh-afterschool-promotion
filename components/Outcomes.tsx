@@ -69,7 +69,7 @@ export default function Outcomes() {
             이런 역량이 길러져요
           </h2>
           <p className="text-[#8a7b70] text-[15px] max-w-lg">
-            18차시가 끝날 때쯤엔 AI가 낯설지 않고, 내 손으로 무언가를 만들 수 있다는 자신감이 생깁니다.
+            18주가 끝날 때쯤엔 AI가 낯설지 않고, 내 손으로 무언가를 만들 수 있다는 자신감이 생깁니다.
           </p>
         </motion.div>
 

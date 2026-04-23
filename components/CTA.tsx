@@ -40,7 +40,7 @@ export default function CTA() {
           </h2>
 
           <p className="text-[rgba(255,255,255,0.45)] text-[1rem] leading-relaxed mb-10 max-w-md mx-auto">
-            AI와 함께하는 18차시 여정이 기다리고 있어요.
+            AI와 함께하는 18주 여정이 기다리고 있어요.
             <br />
             자리가 한정되어 있으니 서두르세요.
           </p>
@@ -49,7 +49,7 @@ export default function CTA() {
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {[
               { label: "모집 대상", value: "1·2학년 여학생" },
-              { label: "운영 기간", value: "주 1회 18주" },
+              { label: "운영 일정", value: "화·수 7교시 18주" },
               { label: "신청 방법", value: "담당 교사 문의" },
             ].map(({ label, value }) => (
               <div key={label} className="px-4 py-2.5 rounded-2xl border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.04)] text-center">

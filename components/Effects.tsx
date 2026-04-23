@@ -5,7 +5,7 @@ export default function Effects() {
         <div className="reveal">
           <span className="section-label">기대 효과</span>
           <h2 className="section-title">
-            18차시 후,<br />무엇이 <em>달라질까요</em>
+            18주 후,<br />무엇이 <em>달라질까요</em>
           </h2>
           <p className="section-lead">
             단순한 체험이 아니라, 스스로 만들어본 경험이 쌓이는 수업이에요.
