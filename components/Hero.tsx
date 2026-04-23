@@ -55,7 +55,7 @@ export default function Hero() {
             <span className="chip"><strong>18</strong>주 운영</span>
             <span className="chip">주 2회 · 화·수 <strong>50</strong>분</span>
             <span className="chip">대상 · 1·2학년</span>
-            <span className="chip">매 차시 결과물</span>
+            <span className="chip">매 주차 결과물</span>
           </div>
 
           <div className="hero-cta-row reveal d4">

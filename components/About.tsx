@@ -32,7 +32,7 @@ export default function About() {
           </div>
           <div className="stat-card">
             <div className="stat-num">18<span className="stat-unit">작품</span></div>
-            <div className="stat-label">매 차시 결과물</div>
+            <div className="stat-label">매 주차 결과물</div>
             <Star4Shape className="shape" fill="#9fe5cf" style={{ width: 54, opacity: 0.3 }} />
           </div>
           <div className="stat-card">
@@ -59,7 +59,7 @@ export default function About() {
               </svg>
             </div>
             <h3>한 번 빠져도 괜찮아요</h3>
-            <p>각 차시가 독립적으로 구성되어 있어서, 한 회를 놓쳐도 다음 수업을 따라올 수 있어요.</p>
+            <p>각 주차가 독립적으로 구성되어 있어서, 한 회를 놓쳐도 다음 수업을 따라올 수 있어요.</p>
           </div>
           <div className="feature">
             <div className="icon" style={{ background: "#ece6ff" }}>
