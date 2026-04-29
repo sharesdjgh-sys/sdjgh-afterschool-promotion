@@ -10,6 +10,7 @@ type FormData = {
   grade: string;
   name: string;
   classNo: string;
+  phoneOwner: string;
   phone: string;
   interest: string;
   motive: string;
@@ -18,7 +19,7 @@ type FormData = {
 type Errors = Partial<Record<keyof FormData, string>>;
 
 export default function Apply() {
-  const [form, setForm] = useState<FormData>({ grade: "", name: "", classNo: "", phone: "", interest: "", motive: "" });
+  const [form, setForm] = useState<FormData>({ grade: "", name: "", classNo: "", phoneOwner: "본인", phone: "", interest: "", motive: "" });
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -35,6 +36,7 @@ export default function Apply() {
     if (!form.name.trim())    newErrors.name    = "이름을 입력해주세요.";
     if (!form.classNo.trim()) newErrors.classNo = "반·번호를 입력해주세요.";
     if (!form.phone.trim())   newErrors.phone   = "연락처를 입력해주세요.";
+    if (!form.motive.trim())  newErrors.motive  = "신청 동기를 입력해주세요.";
     if (Object.keys(newErrors).length > 0) { setErrors(newErrors); return; }
 
     setLoading(true);
@@ -118,7 +120,15 @@ export default function Apply() {
                 </div>
 
                 <div className="field">
-                  <label>* 연락처 (본인 또는 보호자)</label>
+                  <label>* 연락처</label>
+                  <div className="radio-row">
+                    {["본인", "학부모"].map((v) => (
+                      <label key={v}>
+                        <input type="radio" name="phoneOwner" value={v} checked={form.phoneOwner === v} onChange={set("phoneOwner")} />
+                        {v}
+                      </label>
+                    ))}
+                  </div>
                   <input type="tel" placeholder="010-0000-0000" value={form.phone} onChange={set("phone")} className={errors.phone ? "input-error" : ""} />
                   {errors.phone && <span className="field-error">{errors.phone}</span>}
                 </div>
@@ -136,8 +146,9 @@ export default function Apply() {
                 </div>
 
                 <div className="field">
-                  <label>신청 동기 (선택)</label>
-                  <textarea placeholder="이 수업에 신청하게 된 이유를 간단히 적어주세요." value={form.motive} onChange={set("motive")} />
+                  <label>* 신청 동기</label>
+                  <textarea placeholder="이 수업에 신청하게 된 이유를 간단히 적어주세요." value={form.motive} onChange={set("motive")} className={errors.motive ? "input-error" : ""} />
+                  {errors.motive && <span className="field-error">{errors.motive}</span>}
                 </div>
 
                 <div className="submit-row">
