@@ -36,7 +36,7 @@ export default function Apply() {
     if (!form.name.trim())    newErrors.name    = "이름을 입력해주세요.";
     if (!form.classNo.trim()) newErrors.classNo = "반·번호를 입력해주세요.";
     if (!form.phone.trim())   newErrors.phone   = "연락처를 입력해주세요.";
-    if (!form.motive.trim())  newErrors.motive  = "신청 동기를 입력해주세요.";
+    if (!form.motive.trim())  newErrors.motive  = "지원 동기를 입력해주세요.";
     if (Object.keys(newErrors).length > 0) { setErrors(newErrors); return; }
 
     setLoading(true);
@@ -70,7 +70,7 @@ export default function Apply() {
             <div className="info-list">
               {[
                 { k: "대상", v: "1·2학년 전체", s: "학년 구분 없이 신청 가능" },
-                { k: "일정", v: "주 2회 · 총 18주", s: "화·수요일 7교시 오후 3시~3시 50분 수업" },
+                { k: "일정", v: "주 2회 · 총 18주", s: "화·수요일 7교시(오후 3시 10분~4시) 수업" },
                 { k: "장소", v: "본교 1층 스마트학습실", s: "장소 변경시 안내 예정" },
                 { k: "비용", v: "무료", s: "별도 수강료 없이 무료로 운영" },
               ].map(({ k, v, s }) => (
@@ -146,7 +146,7 @@ export default function Apply() {
                 </div>
 
                 <div className="field">
-                  <label>* 신청 동기</label>
+                  <label>* 지원 동기</label>
                   <textarea placeholder="이 수업에 신청하게 된 이유를 간단히 적어주세요." value={form.motive} onChange={set("motive")} className={errors.motive ? "input-error" : ""} />
                   {errors.motive && <span className="field-error">{errors.motive}</span>}
                 </div>
