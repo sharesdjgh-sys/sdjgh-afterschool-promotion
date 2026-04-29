@@ -147,7 +147,7 @@ export default function Apply() {
 
                 <div className="field">
                   <label>* 지원 동기</label>
-                  <textarea placeholder="이 수업에 신청하게 된 이유를 간단히 적어주세요." value={form.motive} onChange={set("motive")} className={errors.motive ? "input-error" : ""} />
+                  <textarea placeholder="이 수업에 지원하게 된 동기를 간단히 적어주세요." value={form.motive} onChange={set("motive")} className={errors.motive ? "input-error" : ""} />
                   {errors.motive && <span className="field-error">{errors.motive}</span>}
                 </div>
 
